@@ -1,0 +1,19 @@
+class Question
+{
+field string question;
+field string answer;
+constructor Question new(string q, string ans)
+{ 
+let question=q;
+let answer=ans;
+return this;
+}
+method string getQuestion()
+{
+return question;
+}
+method string getAnswer()
+{
+return answer;
+}
+}

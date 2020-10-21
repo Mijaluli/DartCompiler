@@ -1,0 +1,63 @@
+//tamae grinblat-208098699,abigail fox 317801157
+class Main
+{
+function void main()
+{
+ var Array askQuestions;
+ var int myCounter; 
+
+	 
+ var int yourScore;
+ var String myanswer;
+ var String temp2;
+ var Question temp1;
+ let yourScore=0;
+ let myCounter=0;
+ let temp2=" ";
+ let myanswer=" ";
+ let askQuestions=Array.new(10);
+ let askQuestions[0]= Question.new("Does the car have four wheels ?", "Y");
+ let askQuestions[1]= Question.new("Was David Ben-Gurion the first prime minister in Israel?", "Y");
+ let askQuestions[2]= Question.new("Is there twenty-four hours a day?", "Y");
+ let askQuestions[3]= Question.new("Is Antiochus born in 1002", "N");
+ let askQuestions[4]= Question.new("Is a new born kangaroo small enough to fit in a cup?", "Y");
+ let askQuestions[5]= Question.new("Does a snake sleep with eyes open?", "Y");
+ let askQuestions[6]= Question.new("Do goldfish suffer from motion sickness?", "Y");
+ let askQuestions[7]= Question.new("Does the chicken have horns", "N");
+ let askQuestions[8]= Question.new("Is a cat abandoning her puppies?", "N");
+ let askQuestions[9]= Question.new("Does a bird have more bones than a cat?", "Y");
+ 
+ 
+ let myanswer=Keyboard.readLine("Hello! Do you want to start? to start press Y");
+ do Output.println();
+ while (~(myanswer.charAt(0)=89)){
+ let ans=Keyboard.readLine("Hello! Do you want to start? to start press Y");
+  do Output.println();
+ }
+ while (~(myCounter = 10)){
+	    let temp1=askQuestions[myCounter];
+		let temp2= temp1.getQuestion();	
+		let myanswer=Keyboard.readLine(temp2);
+		do Output.println();
+		let temp1=askQuestions[myCounter];
+		let temp2= temp1.getAnswer();
+		do Output.println();
+		if (myanswer.charAt(0)=temp2.charAt(0)){
+				let yourScore=yourScore+1;
+				do Output.printString("You're so smart - your answer is correct!");
+				 do Output.println();
+		}
+		else{
+				do Output.printString("You made a huge mistaeke!");
+				 do Output.println();
+		}
+		
+	   let myCounter=myCounter+1;
+ }
+ 
+ do Output.printString("Your score is ");
+ do Output.printInt(yourScore);
+ return;
+}
+
+}
